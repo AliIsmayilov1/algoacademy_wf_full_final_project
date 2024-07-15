@@ -16,11 +16,19 @@ div.Memberships > div:nth-child(n){
     align-items: center;
 }
 
-div.Memberships > div:nth-child(n) > button.buy{
-    border: 0;
+div.Memberships > div:nth-child(n) > div.buttonHolder{
     width: 80%;
+    background-color: #25ab75;
+    display: flex;
+    justify-content: center;
     padding: 8px;
     border-radius: 8px;
+}
+
+div.Memberships > div:nth-child(n) > div.buttonHolder > a.buy{
+    text-decoration: none;
+    color: white;
+
 }
 
 div.Memberships > div:nth-child(n) > button.buy:hover{

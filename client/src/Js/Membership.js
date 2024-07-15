@@ -1,55 +1,57 @@
 import "../Css/Membership.css";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Membership() {
+  let [trainer, setTrainer] = useState(false);
+  console.log(trainer);
   return (
     <>
       <div className="Memberships">
         <div className="membership1">
           <h2>
-            12 times <span>+Trainer</span> <span>+Shover</span>
+            12 times in a month <span>+Trainer</span> <span>+Shover</span>
           </h2>
-          <p id="tr" onClick={addTrainer}>
+          <p id="tr" onClick={() => setTrainer(!trainer)}>
             +Trainer
           </p>
           <p>+Shower</p>
           <h3>Price:40$</h3>
-          <button className="buy">Buy</button>
+          <div className="buttonHolder">
+            <Link to={"/Profile12"} className="buy">
+              Buy
+            </Link>
+          </div>
         </div>
         <div className="membership2">
           <h2>
-            16 times <span>+Trainer</span> <span>+Shover</span>
+            16 times in a month<span>+Trainer</span> <span>+Shover</span>
           </h2>
-          <p id="tr" onClick={addTrainer}>
-            +Trainer
-          </p>
+          <p id="tr">+Trainer</p>
           <p>+Shower</p>
           <h3>Price:60$</h3>
-          <button className="buy">Buy</button>
+          <div className="buttonHolder">
+            <Link to={"/Profile16"} className="buy">
+              Buy
+            </Link>
+          </div>
         </div>
-        <div className="membership1">
+        <div className="membership3">
           <h2>
-            No limit <span>+Trainer</span> <span>+Shover</span>
+            No limit for a month<span>+Trainer</span> <span>+Shover</span>
           </h2>
-          <p id="tr" onClick={addTrainer}>
-            +Trainer
-          </p>
+          <p id="tr">+Trainer</p>
           <p>+Shover</p>
           <h3>Price:80$</h3>
-          <button className="buy">Buy</button>
+          <div className="buttonHolder">
+            <Link to={"/LimitlessProfile"} className="buy">
+              Buy
+            </Link>
+          </div>
         </div>
       </div>
     </>
   );
 }
 
-console.log(document.getElementById("tr"));
-
-function addTrainer(e) {
-  console.log(e);
-  document.getElementById("tr").style.display = "none";
-  //   for (let i = 0; i < document.querySelectorAll("h2>span").length; i++) {
-  //     for(let a = 0;a<document.querySelectorAll("h2")[i].children.length;a++)
-  //     document.querySelectorAll("h2")[i].children[a].style.display = "inline";
-  //   }
-}
 export default Membership;
