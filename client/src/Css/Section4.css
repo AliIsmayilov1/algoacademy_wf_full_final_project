@@ -1,0 +1,29 @@
+div.workout{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+div.section4Holder{
+    margin-top: 200px;
+    padding: 0px 40px;
+}
+
+div.workoutTextHolder{
+    width: 350px;
+}
+
+div.workoutTextHolder > p{
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 400;
+}
+
+div.workout > p{
+    color: rgba(255, 255, 255, 0.370);
+    font-weight: 600;
+}
+
+div.workoutTextHolder > h1{
+    font-weight: 400;
+}

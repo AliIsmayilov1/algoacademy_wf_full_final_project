@@ -1,0 +1,161 @@
+div.sectionHolder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  margin-block: 80px;
+  text-align: start;
+  padding: 0px 40px;
+}
+div.newHolder {
+  margin: 0px 40px;
+  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.104);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 380px;
+  border-radius: 200px;
+  height: 36px;
+}
+div.new {
+  padding: 5px;
+  background-color: green;
+  border-radius: 200px;
+  color: white;
+}
+div.newHolder > p {
+  color: white;
+}
+div.sectionHolder > .text > h1 {
+  display: inline-block;
+  font-weight: 600;
+  line-height: 150px;
+  font-size: 150px;
+  margin-block: 50px;
+  position: sticky;
+  z-index: 2;
+}
+
+div.sectionHolder > .text > p {
+  opacity: 50%;
+}
+
+div.text {
+  position: relative;
+  /* width: 500px; */
+}
+
+.green {
+  user-select: none;
+  background-color: #25ab75;
+  color: white;
+  display: inline-block;
+  padding: 8px;
+  border-radius: 10px;
+  height: 35px;
+  width: 100px;
+  text-align: center;
+  line-height: 35px;
+}
+
+.black {
+  user-select: none;
+  background-color: rgba(255, 255, 255, 0.107);
+  color: white;
+  display: inline-block;
+  padding: 8px;
+  border-radius: 10px;
+  height: 35px;
+  width: 100px;
+  text-align: center;
+  line-height: 35px;
+}
+
+.buttonHolder {
+  display: flex;
+  gap: 16px;
+}
+
+div.button2Holder {
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+div.button2Holder > .h1 {
+  background-color: rgba(255, 255, 255, 0.105);
+  width: 166px;
+  height: 98px;
+  border-radius: 20px;
+  text-align: start;
+}
+
+div.button2Holder > .yellow > h1 {
+  color: #ffe642;
+  margin: 0;
+}
+
+div.button2Holder > .yellow {
+  padding: 0px 32px;
+  box-sizing: border-box;
+}
+
+div.button2Holder > .red > h1 {
+  color: #fb1351;
+  margin: 0;
+}
+
+div.button2Holder > .red {
+  box-sizing: border-box;
+  padding: 0px 28px;
+}
+
+.text > .imageHolder {
+  position: absolute;
+  width: 300px;
+  height: 380px;
+  top: -30px;
+  left: 560px;
+}
+
+.text > .imageHolder > img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1244px) {
+  div.imageHolder {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  div.sectionHolder {
+    flex-direction: column;
+    align-items: baseline;
+  }
+  div.button2Holder {
+    margin-top: 30px;
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 768px) {
+  div.sectionHolder > .text > h1 {
+    display: inline-block;
+    font-weight: 600;
+    line-height: 80px;
+    font-size: 80px;
+    margin-block: 50px;
+    position: sticky;
+    z-index: 2;
+  }
+  
+}
+
+@media (max-width:576px) {
+  div.sectionHolder > .text > p {
+    width: 300px;
+  }
+}

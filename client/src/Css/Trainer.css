@@ -1,0 +1,13 @@
+div.trainerHolder {
+  color: white;
+}
+div.trainerHolder > h1 {
+  text-align: center;
+}
+
+div.Trainer{
+    padding: 16px;
+    margin: 16px;
+    background-color: rgba(255, 255, 255, 0.148);
+    width: auto;
+}

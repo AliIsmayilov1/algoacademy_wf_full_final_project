@@ -1,0 +1,50 @@
+div.navContainer{
+    padding: 0px 40px;
+    margin-bottom: 80px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+div.navContainer > h4{
+    display: inline-block;
+}
+div.navContainer > h4:hover{
+    user-select: none;
+}
+
+div.navContainer > nav{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+div.navContainer > nav > i{
+    color: white;
+    display: none;
+}
+
+div.navContainer > nav > a{
+    color: white;
+    text-decoration: none;
+    opacity: 67%;
+}
+div.navContainer > nav > a:hover{
+    cursor: pointer;
+    user-select: none;
+}
+
+@media (max-width:768px) {
+    div.navContainer > nav > a{
+        display: none;
+    }
+    div.navContainer > nav > i{
+        display: block;
+    }
+    div.navContainer > nav > i:hover{
+        cursor: pointer;
+    }
+    div.navContainer > nav{
+        /* flex-direction: column; */
+    }
+}
