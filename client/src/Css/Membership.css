@@ -26,3 +26,10 @@ div.Memberships > div:nth-child(n) > button.buy{
 div.Memberships > div:nth-child(n) > button.buy:hover{
     cursor: pointer;
 }
+
+h2>span{
+    display: none;
+}
+p#tr:hover{
+    cursor: pointer;
+}
