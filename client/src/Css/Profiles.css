@@ -1,0 +1,37 @@
+div.standartHolder{
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(../Images/thumb-1920-1046878.jpg);
+}
+div.userInfo > a{
+    color: #25ab75;
+    text-decoration: none;
+}
+
+div.advancedHolder{
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;   
+    background-image: url(../Images/thumb-1920-1046878.jpg);
+
+}
+
+div.specialHolder{
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;   
+    background-image: url(../Images/thumb-1920-1046878.jpg);
+}

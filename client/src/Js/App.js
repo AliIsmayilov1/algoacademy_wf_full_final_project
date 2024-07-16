@@ -8,9 +8,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SignUp from "./SignUp";
 import Membership from "./Membership";
 import Trainers from "./Trainers";
-import Profile12 from "./Profile12";
-import Profile16 from "./Profile16";
-import LimitlessProfile from "./LimitlessProfile";
+import StandartProfile from "./StandartProfile";
+import AdvancedProfile from "./AdvancedProfile";
+import SpecialProfile from "./SpecialProfile";
 
 
 function App() {
@@ -34,9 +34,9 @@ function App() {
             <Route path="/SignUp" element={<SignUp></SignUp>}></Route>
             <Route path="/BuyAMembership" element={<Membership></Membership>}></Route>
             <Route path="/Trainers" element={<Trainers></Trainers>}></Route>
-            <Route path="/Profile12" element={<Profile12></Profile12>}></Route>
-            <Route path="/Profile16" element={<Profile16></Profile16>}></Route>
-            <Route path="/LimitlessProfile" element={<LimitlessProfile></LimitlessProfile>}></Route>
+            <Route path="/StandartProfile" element={<StandartProfile></StandartProfile>}></Route>
+            <Route path="/AdvancedProfile" element={<AdvancedProfile></AdvancedProfile>}></Route>
+            <Route path="/SpecialProfile" element={<SpecialProfile></SpecialProfile>}></Route>
           </Routes>
         </BrowserRouter>
       </body>

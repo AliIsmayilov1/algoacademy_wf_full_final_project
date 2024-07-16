@@ -31,7 +31,7 @@ div.Memberships > div:nth-child(n) > div.buttonHolder > a.buy{
 
 }
 
-div.Memberships > div:nth-child(n) > button.buy:hover{
+div.Memberships > div:nth-child(n) > div.buttonHolder:hover{
     cursor: pointer;
 }
 
