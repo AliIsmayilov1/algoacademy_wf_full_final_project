@@ -1,43 +1,66 @@
-div.Memberships{
-    color: white;
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
-    background-image: url(../Images/black-and-green-shapes.jpg);
-    background-size: cover;
+div.Memberships {
+  color: white;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  background-image: url(../Images/black-and-green-shapes.jpg);
+  background-size: cover;
 }
-div.Memberships > div:nth-child(n){
-    background-color: rgba(255, 255, 255, 0.104);
-    padding: 32px;
-    display: flex;
+div.Memberships > div:nth-child(n) {
+  background-color: rgba(255, 255, 255, 0.104);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.Memberships > div:nth-child(n) > div.buttonHolder {
+  width: 80%;
+  background-color: #25ab75;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+div.Memberships > div:nth-child(n) > div.buttonHolder > a.buy {
+  width: 100%;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+
+div.Memberships > div:nth-child(n) > div.buttonHolder:hover {
+  cursor: pointer;
+}
+
+h2 > span {
+  display: none;
+}
+p#tr:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 1062px) {
+  div.Memberships {
+    gap: 20px;
+  }
+  div.Memberships > div:nth-child(n) {
+    padding: 20px;
+  }
+  div.Memberships > div:nth-child(n) > :nth-child(n) {
+    margin: 2px;
+  }
+}
+@media (max-width: 940px) {
+  div.Memberships {
     flex-direction: column;
-    align-items: center;
-}
-
-div.Memberships > div:nth-child(n) > div.buttonHolder{
-    width: 80%;
-    background-color: #25ab75;
-    display: flex;
-    justify-content: center;
-    padding: 8px;
-    border-radius: 8px;
-}
-
-div.Memberships > div:nth-child(n) > div.buttonHolder > a.buy{
-    text-decoration: none;
-    color: white;
-
-}
-
-div.Memberships > div:nth-child(n) > div.buttonHolder:hover{
-    cursor: pointer;
-}
-
-h2>span{
-    display: none;
-}
-p#tr:hover{
-    cursor: pointer;
+    gap: 10px;
+  }
+  div.Memberships > div:nth-child(n) {
+    padding: 5px;
+  }
+  div.Memberships > div:nth-child(n) > :nth-child(n) {
+    margin: 2px;
+  }
 }

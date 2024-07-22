@@ -19,7 +19,7 @@ function Membership() {
           <p>+Shower</p>
           <h3>Price:40$</h3>
           <div className="buttonHolder">
-            <Link to={"/StandartProfile"} className="buy">
+            <Link to={"/StandartProfile"}  className="buy">
               Buy
             </Link>
           </div>
