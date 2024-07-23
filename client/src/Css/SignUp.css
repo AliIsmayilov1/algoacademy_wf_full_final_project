@@ -18,6 +18,8 @@ div.SignUp {
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 16px;
   padding: 16px;
+  display: flex;
+  justify-content: center;
 }
 
 form{
@@ -41,8 +43,8 @@ div.SignUpButton>button{
     background-color: yellow;
     border: 0;
     width: 100px;
-    padding: 16px;
-    border-radius: 16px;
+    padding: 8px;
+    border-radius: 8px;
 }
 div.SignUpButton>button:hover{
     cursor: pointer;
