@@ -1,13 +1,13 @@
-const axios = require("axios")
+import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/SignUp"
+const API_URL = "http://127.0.0.1:5000/api"
 
-export const userInfo = async(firstname,lastname,age,gender)=>{
+export const registerUser = async(firstname,lastname,age,gender)=>{
     try{
-        const response = await axios.post(API_URL,{firstname,lastname,age,gender})
+        const response = await axios.post(`${API_URL}/register`,(firstname,lastname,age,gender))
         return response.data
     }
     catch(error){
-        throw error.response.data;
+        throw error.response.data
     }
 }

@@ -1,13 +1,30 @@
 div.trainerHolder {
   color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(../Images/trainerbackground.jpg);
 }
 div.trainerHolder > h1 {
   text-align: center;
 }
 
-div.Trainer{
+div#Trainer{
     padding: 16px;
     margin: 16px;
     background-color: rgba(255, 255, 255, 0.148);
-    width: auto;
+    width: 70%;
+    height: 140px;
+    display: flex;
+    gap: 16px;
+    overflow: auto;
+}
+
+
+div.TrainerImg > img{
+  height: 100%;
+}
+
+div.aboutTrainer > h3,h4{
+  margin: 10px;
 }

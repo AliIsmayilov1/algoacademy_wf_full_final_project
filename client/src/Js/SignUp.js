@@ -1,27 +1,27 @@
 import { useState } from "react";
 import "../Css/SignUp.css";
-import { userInfo } from "../api";
+import { registerUser } from "../api";
 
 const SignUp = () => {
-  const [firstname, setFirstName] = useState("");
-  const [lastname, setLastName] = useState("");
-  const [age, setAge] = useState("");
-  const [gender, setGender] = useState("");
+  const { firstname, lastname, gender, age } = useState("");
+  // const {message, setMessage} = useState("");
 
   const handleSignUp = async (e) => {
     e.preventDefault();
     try {
-      const data = await userInfo(firstname, lastname, age, gender);
+      const data = await registerUser(firstname, lastname, age, gender);
+      // setMessage(data.message);
     } catch (error) {
-        return console.log(error)
+      // setMessage(error.error);
+      return console.log(error);
     }
   };
   return (
     <>
-      <div className="SignUpHolder" >
+      <div className="SignUpHolder">
         <h1 className="reg">Registration</h1>
         <div className="SignUp">
-          <form onSubmit={handleSignUp}>
+          <form action="BuyAMembership" onSubmit={handleSignUp}>
             <label for="Name">Name: </label>
             <br></br>
             <input
@@ -29,7 +29,6 @@ const SignUp = () => {
               name="Name"
               id="Name"
               value={firstname}
-              onChange={(e)=>{setFirstName(e.target.value)}}
               placeholder="Enter your Name"
               required
             ></input>
@@ -41,7 +40,6 @@ const SignUp = () => {
               name="Surname"
               id="Surname"
               value={lastname}
-              onChange={(e)=>{setLastName(e.target.value)}}
               placeholder="Enter your Surname"
               required
             ></input>
@@ -56,29 +54,16 @@ const SignUp = () => {
               min={16}
               max={60}
               value={age}
-              onChange={(e)=>{setAge(e.target.value)}}
               required
             ></input>
             <br></br>
             <label>Choose your gender:</label>
             <br></br>
             <label>Male: </label>
-            <input
-              type="radio"
-              name="gender"
-              value={gender}
-              onChange={(e)=>{setGender(e.target.value)}}
-              required
-            ></input>
+            <input type="radio" name="gender" value={gender} required></input>
             <br></br>
             <label>Female: </label>
-            <input
-              type="radio"
-              name="gender"
-              value={gender}
-              onChange={(e)=>{setGender(e.target.value)}}
-              required
-            ></input>
+            <input type="radio" name="gender" value={gender} required></input>
             <br></br>
             <br></br>
             <div className="SignUpButton">
@@ -89,5 +74,5 @@ const SignUp = () => {
       </div>
     </>
   );
-}
+};
 export default SignUp;

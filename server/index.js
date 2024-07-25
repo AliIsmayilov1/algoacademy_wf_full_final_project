@@ -1,49 +1,46 @@
 const express = require("express");
-
-const mongoose = require("mongoose")
-
-
-
-//middleware
-const cors = require("cors")
-app.use(cors())
+const mongoose = require("mongoose");
+const cors = require("cors");
 const app = express();
-app.use(express.json())
 
-mongoose.connect("mongodb://localhost:27017/",{
-    useNewUrlParser:true,
-    useUnifiedTopology:true,
-})
+//Middleware
 
-const userShema = new mongoose.Schema({
-    firstname:String,
-    lastname:String,
-    age:Number,
-    gender:String,
-})
+app.use(cors());
+app.use(express.json());
 
-const User = mongoose.model("User",userShema)
+//Connect mongoDb
 
+mongoose.connect("mongodb://localhost:27017/"),
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  };
 
+//Schema
 
-app.post('/api/SignUp',async(req,res)=>{
-    const {firstname,lastname,age,gender} = req.body
-    try{
-        const newUser = new User({
-            firstname:firstname,
-            lastname:lastname,
-            age:age,
-            gender:gender
-        })
-        await newUser.save()
-        res.status(201)
-    }
-    catch(err){
-        res.status(400)
-    }
+const userSchema = new mongoose.Schema({
+  firstname: String,
+  lastname: String,
+  age: Number,
+  gender: String,
+});
 
-})
+const User = mongoose.model("User", userSchema);
 
-app.listen(5000,()=>{
-    console.log("Server started")
-})
+//Register post model
+
+app.post("/api/register", async (req, res) => {
+  const { firstname, lastname, age, gender } = req.body;
+
+  try {
+    const newUser = new User({firstname,lastname,age,gender});
+    await newUser.save();
+    res.status(201).json({ message: "User registered" });
+  } catch (error) {
+    res.status(400).json({ message: "Something went wrong" });
+  }
+});
+
+app.listen(5000, () => {
+  console.log("Server Started");
+});

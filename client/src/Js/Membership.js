@@ -3,8 +3,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Membership() {
-  let [trainer, setTrainer] = useState(false);
-  console.log(trainer);
+  // let [trainer, setTrainer] = useState(false);
+  // console.log(trainer);
   return (
     <>
       <div className="Memberships">
@@ -13,7 +13,7 @@ function Membership() {
           <h2>
             12 times in a month <span>+Trainer</span> <span>+Shover</span>
           </h2>
-          <p id="tr" onClick={() => setTrainer(!trainer)}>
+          <p id="tr" >
             +Trainer
           </p>
           <p>+Shower</p>
