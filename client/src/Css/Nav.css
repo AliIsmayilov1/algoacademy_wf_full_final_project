@@ -38,6 +38,9 @@ div.navContainer > nav > a:hover{
     div.navContainer > nav > a{
         display: none;
     }
+    div.navContainer > nav{
+        gap: 10px;
+    }
     div.navContainer > nav > i{
         display: block;
     }
@@ -45,6 +48,14 @@ div.navContainer > nav > a:hover{
         cursor: pointer;
     }
     div.navContainer > nav{
-        /* flex-direction: column; */
+        flex-direction: column;
+    }
+}
+@media (min-width:768px) {
+    div.navContainer > nav > a{
+        display: block !important;
+    }
+    div.navContainer > nav > i{
+        display: none;
     }
 }

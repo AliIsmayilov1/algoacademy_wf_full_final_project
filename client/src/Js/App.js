@@ -12,7 +12,6 @@ import StandartProfile from "./StandartProfile";
 import AdvancedProfile from "./AdvancedProfile";
 import SpecialProfile from "./SpecialProfile";
 
-
 function App() {
   return (
     <>
@@ -32,11 +31,23 @@ function App() {
               }
             ></Route>
             <Route path="/SignUp" element={<SignUp></SignUp>}></Route>
-            <Route path="/BuyAMembership" element={<Membership></Membership>}></Route>
+            <Route
+              path="/BuyAMembership"
+              element={<Membership></Membership>}
+            ></Route>
             <Route path="/Trainers" element={<Trainers></Trainers>}></Route>
-            <Route path="/StandartProfile" element={<StandartProfile></StandartProfile>}></Route>
-            <Route path="/AdvancedProfile" element={<AdvancedProfile></AdvancedProfile>}></Route>
-            <Route path="/SpecialProfile" element={<SpecialProfile></SpecialProfile>}></Route>
+            <Route
+              path="/StandartProfile"
+              element={<StandartProfile></StandartProfile>}
+            ></Route>
+            <Route
+              path="/AdvancedProfile"
+              element={<AdvancedProfile></AdvancedProfile>}
+            ></Route>
+            <Route
+              path="/SpecialProfile"
+              element={<SpecialProfile></SpecialProfile>}
+            ></Route>
           </Routes>
         </BrowserRouter>
       </body>

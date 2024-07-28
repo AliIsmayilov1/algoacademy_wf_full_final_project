@@ -16,11 +16,14 @@ div.top > p {
 }
 
 div.textHolder > h1 {
+  background-color: black;
   color: white;
   position: absolute;
-  top: 87%;
+  top: 84%;
   margin: 0;
-  font-size: 40px;
+  font-size: 30px;
+  border-radius: 0px 8px 0px 0px;
+
 }
 
 div.main {
