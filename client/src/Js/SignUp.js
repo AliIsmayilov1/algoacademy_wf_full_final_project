@@ -16,9 +16,8 @@ const SignUp = () => {
       const data = await registerUser(firstname, lastname, age, gender);
       setMessage(data.message);
       localStorage.setItem("firstname", JSON.stringify(firstname));
-      localStorage.setItem("gender",JSON.stringify(gender))
-      localStorage.setItem("userLastname",JSON.stringify(lastname))
-
+      localStorage.setItem("gender", JSON.stringify(gender));
+      localStorage.setItem("userLastname", JSON.stringify(lastname));
     } catch (error) {
       setMessage(error.message);
       console.log(error);
@@ -28,6 +27,9 @@ const SignUp = () => {
   return (
     <>
       <div className="SignUpHolder">
+        <Link to={"/"}>
+          Go Home <i class="fa-solid fa-house"></i>
+        </Link>
         <h1 className="reg">Registration</h1>
         <div className="SignUp">
           <form onSubmit={handleSignUp}>
@@ -97,11 +99,11 @@ const SignUp = () => {
             </div>
           </form>
         </div>
-            {message && (
-              <Link to={"/BuyAMembership"}>
-                {message} <i class="fa-solid fa-arrow-right"></i>
-              </Link>
-            )}
+        {message && (
+          <Link to={"/BuyAMembership"}>
+            {message} <i class="fa-solid fa-arrow-right"></i>
+          </Link>
+        )}
       </div>
     </>
   );

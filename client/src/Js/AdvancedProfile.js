@@ -17,6 +17,7 @@ function AdvancedProfile() {
             <span></span> {userLastname ? userLastname : "Something went wrong"} <span></span> you can come to our gym 16
             times for next 30 days
           </h3>
+          <h4>Payment must be cash!</h4>
           <h4>Remember we are closed at Sundays</h4>
           <p>If you want you can learn some information about our Trainers</p>
           <i class="fa-solid fa-arrow-down"></i>

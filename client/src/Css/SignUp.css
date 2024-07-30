@@ -52,7 +52,7 @@ div.SignUpButton > button:hover {
   cursor: pointer;
 }
 
-div.SignUpHolder  > a{
+div.SignUpHolder > a {
   text-decoration: none;
   color: white;
 }
@@ -88,6 +88,6 @@ div.loginButton > button {
   border-radius: 8px;
 }
 
-h1.log{
+h1.log {
   color: yellow;
 }
